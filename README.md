@@ -1,4 +1,4 @@
-# anagram-project
+# Real-Time Anagram Generator with Dictionary API
 A fun little Python project I built that plays with words and coding.
 
 It takes any word you give it, finds all the possible anagrams, filters out the ones that aren’t real English words using the Dictionary API, and even lets you look up definitions interactively.
