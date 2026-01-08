@@ -44,8 +44,12 @@ for anagram_word in anagrams_list:
 
 num_valid_words = len(valid_words)
 if len(valid_words) != 0:
-    print(f"There are {num_valid_words} real anagrams of {word} which are: {', '.join(valid_words)}")
-    user_answer = input("Do you want to know what any of these words mean?(y/n)")
+    if len(valid_words) == 1:
+        print(f"There is {num_valid_words} real anagram of {word} which is: {', '.join(valid_words)}")
+        user_answer = input("Do you want to know what this word means?(y/n)")
+    else: 
+        print(f"There are {num_valid_words} real anagrams of {word} which are: {', '.join(valid_words)}")
+        user_answer = input("Do you want to know what any of these words mean?(y/n)")
     while user_answer not in ('y', 'n'):
         print('Answer with either y or n')
         user_answer = input("Do you want to know what any of these words mean?(y/n)")
